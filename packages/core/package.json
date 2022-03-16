@@ -21,5 +21,6 @@
   },
   "dependencies": {
     "@lyb-cli/utils": "^0.0.1"
-  }
+  },
+  "gitHead": "5c4e78eeb6d13765dfc786672ce05d104560c8f8"
 }
