@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/utils",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description": "@lyb-cli utils",
   "author": "liuyibo <liuyibo@luojilab.com>",
   "homepage": "",
@@ -19,5 +19,5 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
-  "gitHead": "5c4e78eeb6d13765dfc786672ce05d104560c8f8"
+  "gitHead": "69412e3b1dcf6ae4fb3a934c77aa809475664758"
 }
