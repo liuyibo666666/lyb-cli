@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/core",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "@lyb-cli core",
   "author": "liuyibo <liuyibo@luojilab.com>",
   "homepage": "",
@@ -20,6 +20,6 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@lyb-cli/utils": "^1.0.0" 
+    "@lyb-cli/utils": "^0.0.1"
   }
 }
