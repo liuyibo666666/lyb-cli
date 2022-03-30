@@ -4,7 +4,7 @@ const semver = require('semver');
 const colors = require('colors/safe');
 const log = require('@lyb-cli/log');
 
-const LOWEST_NODE_VERSION = '12.0.0';
+const LOWEST_NODE_VERSION = 'v12.0.0';
 
 class Command {
   constructor(argv) {
@@ -22,8 +22,7 @@ class Command {
     let runner = new Promise((resolve, reject) => {
       let chain = Promise.resolve();
       chain = chain.then(() => this.checkNodeVersion());
-      chain = chain.then(() => this.initArgs());
-      chain = chain.then(() => this.init());
+      chain = chain.then(() => this.commandArgs());
       chain = chain.then(() => this.exec());
       chain = chain.then(resolve);
       chain.catch(err => {
@@ -34,22 +33,22 @@ class Command {
     this.runner = runner;
   }
 
-  initArgs() {
+  commandArgs() {
     this._cmd = this._argv[this._argv.length - 1];
     this._argv = this._argv.slice(0, this._argv.length - 1);
-    log.verbose('initArgs', this._cmd, this._argv);
+    log.verbose('commandArgs', this._cmd, this._argv);
   }
 
   checkNodeVersion() {
     const currentVersion = process.version;
     const lowestVersion = LOWEST_NODE_VERSION;
+    log.verbose('检查Node版本', '================');
+    log.verbose('currentVersion', currentVersion);
+    log.verbose('lowestVersion', lowestVersion);
+    log.verbose('', '=============================');
     if (!semver.gte(currentVersion, lowestVersion)) {
       throw new Error(colors.red(`lyb-cli 需要安装 v${lowestVersion} 以上版本的 Node.js`));
     }
-  }
-
-  init() {
-    throw new Error('init必须实现！');
   }
 
   exec() {

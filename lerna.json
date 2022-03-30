@@ -3,7 +3,8 @@
     "core/*",
     "models/*",
     "commands/*",
-    "utils/*"
+    "utils/*",
+    "templates/*"
   ],
   "version": "0.0.8"
 }

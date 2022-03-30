@@ -37,6 +37,10 @@ function registerCommand() {
     .option('-f, --force', '是否强制初始化项目')
     .action(exec);
 
+    program
+    .command('install <templateName>')
+    .action(exec);
+
   program
     .command('run [cmd]', 'run getflow cli', {
       executableFile: 'getflow',

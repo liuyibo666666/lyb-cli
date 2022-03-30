@@ -1,8 +1,8 @@
 {
-  "name": "@lyb-cli/exec",
+  "name": "@lyb-cli/install",
   "version": "0.0.8",
-  "description": "exec",
-  "author": "liuyibo <liuyibo@luojilab.com>",
+  "description": "install",
+  "author": "liuyibo <754869828@qq.com>",
   "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
@@ -24,14 +24,14 @@
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
+  "dependencies": {
+    "@lyb-cli/command": "^0.0.8",
+    "@lyb-cli/log": "^0.0.8",
+    "@lyb-cli/utils": "^0.0.8",
+    "@lyb-cli/package": "^0.0.8",
+    "user-home": "^3.0.0"
+  },
   "bugs": {
     "url": "https://github.com/liuyibo666666/lyb-cli/issues"
-  },
-  "dependencies": {
-    "@lyb-cli/init": "^0.0.8",
-    "@lyb-cli/install": "^0.0.8",
-    "@lyb-cli/log": "^0.0.8",
-    "@lyb-cli/utils": "^0.0.8"
-  },
-  "gitHead": "21b9fae0d2910703416a4e923f06c2c3dc689da1"
+  }
 }

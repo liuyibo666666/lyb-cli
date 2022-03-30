@@ -4,11 +4,10 @@ const log = require('@lyb-cli/log');
 
 const SETTINGS = {
   init: '@lyb-cli/init',
+  install: '@lyb-cli/install',
   publish: '',
   add: ''
 };
-
-// const CACHE_DIR = 'dependencies';
 
 async function exec() {
   const homePath = process.env.CLI_HOME_PATH;

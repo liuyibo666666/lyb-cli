@@ -26,6 +26,10 @@ const WHITE_COMMAND = ['npm', 'cnpm'];
 const COMPONENT_FILE = '.componentrc';
 
 class InitCommand extends Command {
+  constructor(argv) {
+    super(argv);
+  }
+
   init() {
     this.projectName = this._argv[0] || '';
     this.force = !!this._cmd.force;
@@ -34,7 +38,10 @@ class InitCommand extends Command {
   }
 
   async getProjectTemplate() {
-    const templateDir = path.resolve(homePath, 'template/node_modules/@lyb-cli');
+    const templateDir = path.resolve(
+      homePath,
+      'template/node_modules/@lyb-cli'
+    );
     const templates = [];
     try {
       const dir = await fs.promises.opendir(templateDir);
@@ -299,35 +306,35 @@ class InitCommand extends Command {
     // 1. 判断当前目录是否为空
     // const localPath = process.cwd();
     // if (!this.isDirEmpty(localPath)) {
-      // let ifContinue = false;
-      // if (!this.force) {
-      //   // 询问是否继续创建
-      //   ifContinue = (
-      //     await inquirer.prompt({
-      //       type: 'confirm',
-      //       name: 'ifContinue',
-      //       default: false,
-      //       message: '当前文件夹不为空，是否继续创建项目？'
-      //     })
-      //   ).ifContinue;
-      //   if (!ifContinue) {
-      //     return;
-      //   }
-      // }
-      // 2. 是否启动强制更新
-      // if (ifContinue || this.force) {
-        // 给用户做二次确认
-        // const { confirmDelete } = await inquirer.prompt({
-        //   type: 'confirm',
-        //   name: 'confirmDelete',
-        //   default: false,
-        //   message: '是否确认清空当前目录下的文件？'
-        // });
-        // if (confirmDelete) {
-          // 清空当前目录
-        //   fse.emptyDirSync(localPath);
-        // }
-      // }
+    // let ifContinue = false;
+    // if (!this.force) {
+    //   // 询问是否继续创建
+    //   ifContinue = (
+    //     await inquirer.prompt({
+    //       type: 'confirm',
+    //       name: 'ifContinue',
+    //       default: false,
+    //       message: '当前文件夹不为空，是否继续创建项目？'
+    //     })
+    //   ).ifContinue;
+    //   if (!ifContinue) {
+    //     return;
+    //   }
+    // }
+    // 2. 是否启动强制更新
+    // if (ifContinue || this.force) {
+    // 给用户做二次确认
+    // const { confirmDelete } = await inquirer.prompt({
+    //   type: 'confirm',
+    //   name: 'confirmDelete',
+    //   default: false,
+    //   message: '是否确认清空当前目录下的文件？'
+    // });
+    // if (confirmDelete) {
+    // 清空当前目录
+    //   fse.emptyDirSync(localPath);
+    // }
+    // }
     // }
     return this.getProjectInfo();
   }
@@ -384,7 +391,7 @@ class InitCommand extends Command {
           }
           done(null, true);
         }, 0);
-      },
+      }
       // filter: function (v) {
       //   return v;
       // }
@@ -492,7 +499,8 @@ class InitCommand extends Command {
 }
 
 function init(argv) {
-  log.verbose('argv', argv);
+  log.verbose('执行init指令');
+  log.verbose('initArgvs', argv);
   return new InitCommand(argv);
 }
 
