@@ -14,7 +14,8 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "repository": {
     "type": "git",
@@ -30,5 +31,6 @@
     "@lyb-cli/init": "^0.0.6",
     "@lyb-cli/log": "^0.0.6",
     "@lyb-cli/utils": "^0.0.6"
-  }
+  },
+  "gitHead": "5108cac273a253932cda9779bd47327ebfea12db"
 }

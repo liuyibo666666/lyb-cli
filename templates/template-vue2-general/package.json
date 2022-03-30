@@ -6,7 +6,8 @@
   "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
   "license": "ISC",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "repository": {
     "type": "git",

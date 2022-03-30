@@ -37,5 +37,6 @@
     "inquirer": "^8.2.1",
     "semver": "^7.3.5",
     "user-home": "^3.0.0"
-  }
+  },
+  "gitHead": "5108cac273a253932cda9779bd47327ebfea12db"
 }
