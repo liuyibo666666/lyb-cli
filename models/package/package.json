@@ -1,0 +1,38 @@
+{
+  "name": "@lyb-cli/package",
+  "version": "0.0.5",
+  "description": "package common",
+  "author": "liuyibo <liuyibo@luojilab.com>",
+  "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyibo666666/lyb-cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/liuyibo666666/lyb-cli/issues"
+  },
+  "dependencies": {
+    "@lyb-cli/utils": "^0.0.5",
+    "@lyb-cli/format-path": "^0.0.5",
+    "@lyb-cli/get-npm-info": "^0.0.5",
+    "fs-extra": "^10.0.1",
+    "npminstall": "^5.7.2",
+    "path-exists": "^4.0.0",
+    "pkg-dir": "^5.0.0"
+  }
+}

@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "lerna": "^4.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.0"
   }
 }

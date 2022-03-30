@@ -1,0 +1,41 @@
+{
+  "name": "@lyb-cli/init",
+  "version": "0.0.5",
+  "description": "init",
+  "author": "liuyibo <liuyibo@luojilab.com>",
+  "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyibo666666/lyb-cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/liuyibo666666/lyb-cli/issues"
+  },
+  "dependencies": {
+    "@lyb-cli/command": "^0.0.5",
+    "@lyb-cli/package": "^0.0.5",
+    "@lyb-cli/log": "^0.0.5",
+    "@lyb-cli/utils": "^0.0.5",
+    "ejs": "^3.1.6",
+    "fs-extra": "^10.0.1",
+    "glob": "^7.2.0",
+    "inquirer": "^8.2.1",
+    "semver": "^7.3.5",
+    "user-home": "^3.0.0"
+  }
+}

@@ -1,14 +1,11 @@
 {
-  "name": "@lyb-cli/core",
+  "name": "@lyb-cli/utils",
   "version": "0.0.5",
-  "description": "@lyb-cli core",
-  "author": "liuyibo <liuyibo@luojilab.com>",
+  "description": "@lyb-cli utils",
+  "author": "liuyibo <754869828@qq.com>",
   "homepage": "",
   "license": "ISC",
   "main": "lib/index.js",
-  "bin": {
-    "lyb-cli": "bin/index.js"
-  },
   "directories": {
     "lib": "lib",
     "test": "__tests__"
@@ -17,14 +14,11 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org",
+    "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
-  },
-  "dependencies": {
-    "@lyb-cli/utils": "^0.0.5"
   },
   "gitHead": "9c2eec307995ae20d905a221e2191341588cab41"
 }

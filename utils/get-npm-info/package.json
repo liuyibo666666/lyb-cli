@@ -1,0 +1,38 @@
+{
+  "name": "@lyb-cli/get-npm-info",
+  "version": "0.0.5",
+  "description": "get npm info",
+  "author": "liuyibo <liuyibo@luojilab.com>",
+  "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyibo666666/lyb-cli.git"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "semver": "^7.3.4",
+    "url-join": "^4.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^9.1.1",
+    "should": "^13.2.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/liuyibo666666/lyb-cli/issues"
+  }
+}
