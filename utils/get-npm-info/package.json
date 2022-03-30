@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/get-npm-info",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "get npm info",
   "author": "liuyibo <liuyibo@luojilab.com>",
   "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",

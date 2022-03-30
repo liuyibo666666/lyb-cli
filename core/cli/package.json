@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/core",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "@lyb-cli core",
   "author": "liuyibo <754869828@qq.com>",
   "homepage": "",
@@ -24,9 +24,9 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@lyb-cli/exec": "^0.0.6",
-    "@lyb-cli/get-npm-info": "^0.0.6",
-    "@lyb-cli/log": "^0.0.6",
+    "@lyb-cli/exec": "^0.0.7",
+    "@lyb-cli/get-npm-info": "^0.0.7",
+    "@lyb-cli/log": "^0.0.7",
     "colors": "^1.4.0",
     "commander": "^9.1.0",
     "dotenv": "^16.0.0",
