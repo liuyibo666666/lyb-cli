@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/command",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "> TODO: description",
   "author": "liuyibo <liuyibo@luojilab.com>",
   "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
@@ -28,7 +28,7 @@
     "url": "https://github.com/liuyibo666666/lyb-cli/issues"
   },
   "dependencies": {
-    "@lyb-cli/log": "^0.0.7",
+    "@lyb-cli/log": "^0.0.8",
     "colors": "^1.4.2",
     "semver": "^7.3.5"
   },
