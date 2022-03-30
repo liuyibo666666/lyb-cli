@@ -4,6 +4,7 @@
   "description": "lyb-cli-test",
   "main": "index.js",
   "scripts": {
+    "publish": "",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "lyb",

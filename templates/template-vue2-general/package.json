@@ -1,0 +1,21 @@
+{
+  "name": "@lyb-cli/template-vue2-general",
+  "version": "0.0.5",
+  "description": "general vue2 template",
+  "author": "liuyibo <754869828@qq.com>",
+  "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyibo666666/lyb-cli.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  },
+  "bugs": {
+    "url": "https://github.com/liuyibo666666/lyb-cli/issues"
+  }
+}
