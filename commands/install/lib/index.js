@@ -1,7 +1,6 @@
 'use strict';
 
 const path = require('path');
-const userHome = require('user-home');
 const Command = require('@lyb-cli/command');
 const log = require('@lyb-cli/log');
 const Package = require('@lyb-cli/package');
@@ -31,13 +30,9 @@ class InstallCommand extends Command {
     if (!this._argv[0]) {
       throw new Error('模板名称不能为空!');
     }
-    const targetPath = path.resolve(userHome, '.lyb-cli', 'template');
-    const storeDir = path.resolve(
-      userHome,
-      '.lyb-cli',
-      'template',
-      'node_modules'
-    );
+    const homePath = process.env.CLI_HOME_PATH;
+    const targetPath = path.resolve(homePath, 'template');
+    const storeDir = path.resolve(homePath, 'template', 'node_modules');
     return {
       targetPath,
       storeDir,
@@ -67,7 +62,7 @@ class InstallCommand extends Command {
 }
 
 function install(argv) {
-    log.verbose('安装模板命令');
+  log.verbose('安装模板命令');
   log.verbose('argv', argv);
   return new InstallCommand(argv);
 }

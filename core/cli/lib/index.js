@@ -109,7 +109,7 @@ function createDefaultConfig() {
   const cliConfig = {
     home: userHome
   };
-  if (process.env.CLI_HOME) {
+  if (process.env.CLI_HOME_PATH) {
     cliConfig['cliHome'] = path.join(userHome, process.env.CLI_HOME);
   } else {
     cliConfig['cliHome'] = path.join(userHome, constant.DEFAULT_CLI_HOME);

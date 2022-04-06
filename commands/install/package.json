@@ -28,8 +28,7 @@
     "@lyb-cli/command": "^0.0.9",
     "@lyb-cli/log": "^0.0.9",
     "@lyb-cli/package": "^0.0.9",
-    "@lyb-cli/utils": "^0.0.9",
-    "user-home": "^3.0.0"
+    "@lyb-cli/utils": "^0.0.9"
   },
   "bugs": {
     "url": "https://github.com/liuyibo666666/lyb-cli/issues"

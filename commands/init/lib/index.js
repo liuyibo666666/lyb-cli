@@ -7,9 +7,7 @@ const fse = require('fs-extra');
 const glob = require('glob');
 const ejs = require('ejs');
 const semver = require('semver');
-const userHome = require('user-home');
 const Command = require('@lyb-cli/command');
-const Package = require('@lyb-cli/package');
 const log = require('@lyb-cli/log');
 const { spinnerStart, sleep, execAsync } = require('@lyb-cli/utils');
 
@@ -18,58 +16,27 @@ const homePath = process.env.CLI_HOME_PATH;
 const TYPE_PROJECT = 'project';
 const TYPE_COMPONENT = 'component';
 
-const TEMPLATE_TYPE_NORMAL = 'normal';
-const TEMPLATE_TYPE_CUSTOM = 'custom';
-
 const WHITE_COMMAND = ['npm', 'cnpm'];
 
 const COMPONENT_FILE = '.componentrc';
 
 class InitCommand extends Command {
+  initInfo = '';
+
   constructor(argv) {
     super(argv);
-  }
-
-  init() {
-    this.projectName = this._argv[0] || '';
-    this.force = !!this._cmd.force;
-    log.verbose('projectName', this.projectName);
-    log.verbose('force', this.force);
-  }
-
-  async getProjectTemplate() {
-    const templateDir = path.resolve(
-      homePath,
-      'template/node_modules/@lyb-cli'
-    );
-    const templates = [];
-    try {
-      const dir = await fs.promises.opendir(templateDir);
-      for await (const dirent of dir) {
-        if (dirent.name.startsWith('template')) {
-          templates.push(path.resolve(templateDir, dirent.name));
-        }
-      }
-    } catch (error) {
-      if (error.code === 'ENOENT') return [];
-      throw error;
-    }
-    return templates;
+    this.projectName = argv[0];
   }
 
   async exec() {
     try {
       // 1. 准备阶段
-      const projectInfo = await this.prepare();
-      // console.log(projectInfo);
-      // if (projectInfo) {
-      //   // 2. 下载模板
-      //   log.verbose('projectInfo', projectInfo);
-      //   this.projectInfo = projectInfo;
-      //   await this.downloadTemplate();
-      //   // 3. 安装模板
-      //   await this.installTemplate();
-      // }
+      this.initInfo = await this.prepare();
+      log.verbose('projectInfo', this.initInfo);
+      if (this.initInfo) {
+        // 2. 安装模板
+        await this.installTemplate();
+      }
     } catch (e) {
       log.error(e.message);
       if (process.env.LOG_LEVEL === 'verbose') {
@@ -78,56 +45,95 @@ class InitCommand extends Command {
     }
   }
 
+  async prepare() {
+    if (!this.projectName) {
+      throw new Error('请输入项目/组件名称');
+    }
+    // 0. 判断项目模板是否存在
+    this.projectTemplates = await this.getProjectTemplate();
+    if (!this.projectTemplates || this.projectTemplates.length === 0) {
+      throw new Error('没有安装任何模板, 请执行: lyb-cli install [模板名称] 安装模板。\n 详情参考:https://github.com/liuyibo666666/lyb-cli/blob/master/README.md。');
+    }
+    // 1. 判断当前目录是否为空
+    // const localPath = process.cwd();
+    // if (!this.isDirEmpty(localPath)) {
+    //   let ifContinue = false;
+    //   if (!this.force) {
+    //     // 询问是否继续创建
+    //     ifContinue = (
+    //       await inquirer.prompt({
+    //         type: 'confirm',
+    //         name: 'ifContinue',
+    //         default: false,
+    //         message: '当前文件夹不为空，是否继续创建项目？'
+    //       })
+    //     ).ifContinue;
+    //     if (!ifContinue) {
+    //       return;
+    //     }
+    //   }
+    //   // 2. 是否启动强制更新
+    //   if (ifContinue || this.force) {
+    //     // 给用户做二次确认
+    //     const { confirmDelete } = await inquirer.prompt({
+    //       type: 'confirm',
+    //       name: 'confirmDelete',
+    //       default: false,
+    //       message: '是否确认清空当前目录下的文件？'
+    //     });
+    //     if (confirmDelete) {
+    //       // 清空当前目录
+    //       fse.emptyDirSync(localPath);
+    //     }
+    //   }
+    // }
+    return this.getProjectInfo();
+  }
+
   async installTemplate() {
-    log.verbose('templateInfo', this.templateInfo);
-    if (this.templateInfo) {
-      if (!this.templateInfo.type) {
-        this.templateInfo.type = TEMPLATE_TYPE_NORMAL;
-      }
-      if (this.templateInfo.type === TEMPLATE_TYPE_NORMAL) {
-        // 标准安装
-        await this.installNormalTemplate();
-      } else if (this.templateInfo.type === TEMPLATE_TYPE_CUSTOM) {
-        // 自定义安装
-        await this.installCustomTemplate();
-      } else {
-        throw new Error('无法识别项目模板类型！');
-      }
+    log.verbose('initInfo', this.initInfo);
+    if (this.initInfo) {
+      await this.installNormalTemplate();
     } else {
       throw new Error('项目模板信息不存在！');
     }
   }
 
-  checkCommand(cmd) {
-    if (WHITE_COMMAND.includes(cmd)) {
-      return cmd;
+  async installNormalTemplate() {
+    log.verbose('initInfo', this.initInfo);
+    // 拷贝模板代码至当前目录
+    let spinner = spinnerStart('正在安装模板...');
+    await sleep();
+    const templatePath = path.resolve(
+      this.initInfo.projectTemplate,
+      'template'
+    );
+    const targetPath = path.resolve(process.cwd(), this.projectName);
+    try {
+      fse.ensureDirSync(templatePath);
+      fse.ensureDirSync(targetPath);
+      fse.copySync(templatePath, targetPath);
+      spinner.stop(true);
+      log.success('模板安装成功');
+    } catch (e) {
+      log.success('模板安装失败');
+      // TODO失败则删除已安装的文件
+      throw e;
     }
-    return null;
-  }
-
-  async execCommand(command, errMsg) {
-    let ret;
-    if (command) {
-      const cmdArray = command.split(' ');
-      const cmd = this.checkCommand(cmdArray[0]);
-      if (!cmd) {
-        throw new Error('命令不存在！命令：' + command);
-      }
-      const args = cmdArray.slice(1);
-      ret = await execAsync(cmd, args, {
-        stdio: 'inherit',
-        cwd: process.cwd()
-      });
-    }
-    if (ret !== 0) {
-      throw new Error(errMsg);
-    }
-    return ret;
+    const ignore = ['**/node_modules/**', '**/public/**'];
+    await this.ejsRender({ ignore });
+    // 如果是组件，则生成组件配置文件
+    // await this.createComponentFile(targetPath);
+    // const { installCommand, startCommand } = this.templateInfo;
+    // 依赖安装
+    // await this.execCommand(installCommand, '依赖安装失败！');
+    // 启动命令执行
+    // await this.execCommand(startCommand, '启动执行命令失败！');
   }
 
   async ejsRender(options) {
-    const dir = process.cwd();
-    const projectInfo = this.projectInfo;
+    const dir = path.resolve(process.cwd(), this.projectName);
+    const projectInfo = this.initInfo;
     return new Promise((resolve, reject) => {
       glob(
         '**',
@@ -166,36 +172,31 @@ class InitCommand extends Command {
     });
   }
 
-  async installNormalTemplate() {
-    log.verbose('templateNpm', this.templateNpm);
-    // 拷贝模板代码至当前目录
-    let spinner = spinnerStart('正在安装模板...');
-    await sleep();
-    const targetPath = process.cwd();
-    try {
-      const templatePath = path.resolve(
-        this.templateNpm.cacheFilePath,
-        'template'
-      );
-      fse.ensureDirSync(templatePath);
-      fse.ensureDirSync(targetPath);
-      fse.copySync(templatePath, targetPath);
-    } catch (e) {
-      throw e;
-    } finally {
-      spinner.stop(true);
-      log.success('模板安装成功');
+  checkCommand(cmd) {
+    if (WHITE_COMMAND.includes(cmd)) {
+      return cmd;
     }
-    const templateIgnore = this.templateInfo.ignore || [];
-    const ignore = ['**/node_modules/**', ...templateIgnore];
-    await this.ejsRender({ ignore });
-    // 如果是组件，则生成组件配置文件
-    await this.createComponentFile(targetPath);
-    const { installCommand, startCommand } = this.templateInfo;
-    // 依赖安装
-    await this.execCommand(installCommand, '依赖安装失败！');
-    // 启动命令执行
-    await this.execCommand(startCommand, '启动执行命令失败！');
+    return null;
+  }
+
+  async execCommand(command, errMsg) {
+    let ret;
+    if (command) {
+      const cmdArray = command.split(' ');
+      const cmd = this.checkCommand(cmdArray[0]);
+      if (!cmd) {
+        throw new Error('命令不存在！命令：' + command);
+      }
+      const args = cmdArray.slice(1);
+      ret = await execAsync(cmd, args, {
+        stdio: 'inherit',
+        cwd: process.cwd()
+      });
+    }
+    if (ret !== 0) {
+      throw new Error(errMsg);
+    }
+    return ret;
   }
 
   async createComponentFile(targetPath) {
@@ -214,129 +215,27 @@ class InitCommand extends Command {
     }
   }
 
-  async installCustomTemplate() {
-    // 查询自定义模板的入口文件
-    if (await this.templateNpm.exists()) {
-      const rootFile = this.templateNpm.getRootFilePath();
-      if (fs.existsSync(rootFile)) {
-        log.notice('开始执行自定义模板');
-        const templatePath = path.resolve(
-          this.templateNpm.cacheFilePath,
-          'template'
-        );
-        const options = {
-          templateInfo: this.templateInfo,
-          projectInfo: this.projectInfo,
-          sourcePath: templatePath,
-          targetPath: process.cwd()
-        };
-        const code = `require('${rootFile}')(${JSON.stringify(options)})`;
-        log.verbose('code', code);
-        await execAsync('node', ['-e', code], {
-          stdio: 'inherit',
-          cwd: process.cwd()
-        });
-        log.success('自定义模板安装成功');
-      } else {
-        throw new Error('自定义模板入口文件不存在！');
-      }
-    }
-  }
-
-  async downloadTemplate() {
-    const { projectTemplate } = this.projectInfo;
-    const templateInfo = this.template.find(
-      item => item.npmName === projectTemplate
+  async getProjectTemplate() {
+    const templateDir = path.resolve(
+      homePath,
+      'template/node_modules/@lyb-cli'
     );
-    const targetPath = path.resolve(userHome, '.lyb-cli', 'template');
-    const storeDir = path.resolve(
-      userHome,
-      '.lyb-cli',
-      'template',
-      'node_modules'
-    );
-    const { npmName, version } = templateInfo;
-    this.templateInfo = templateInfo;
-    const templateNpm = new Package({
-      targetPath,
-      storeDir,
-      packageName: npmName,
-      packageVersion: version
-    });
-    if (!(await templateNpm.exists())) {
-      const spinner = spinnerStart('正在下载模板...');
-      await sleep();
-      try {
-        await templateNpm.install();
-      } catch (e) {
-        throw e;
-      } finally {
-        spinner.stop(true);
-        if (await templateNpm.exists()) {
-          log.success('下载模板成功');
-          this.templateNpm = templateNpm;
+    const templates = [];
+    try {
+      const dir = await fs.promises.opendir(templateDir);
+      for await (const dirent of dir) {
+        if (dirent.name.startsWith('template')) {
+          templates.push({
+            name: dirent.name,
+            value: path.resolve(templateDir, dirent.name)
+          });
         }
       }
-    } else {
-      const spinner = spinnerStart('正在更新模板...');
-      await sleep();
-      try {
-        await templateNpm.update();
-      } catch (e) {
-        throw e;
-      } finally {
-        spinner.stop(true);
-        if (await templateNpm.exists()) {
-          log.success('更新模板成功');
-          this.templateNpm = templateNpm;
-        }
-      }
+    } catch (error) {
+      if (error.code === 'ENOENT') return [];
+      throw error;
     }
-  }
-
-  async prepare() {
-    // 0. 判断项目模板是否存在
-    const templates = await this.getProjectTemplate();
-    if (!templates || templates.length === 0) {
-      // TODO临时放开
-      log.verbose('TODO', '模板不存在,临时放开');
-      // throw new Error('项目模板不存在');
-    }
-    // this.template = '';
-    // 1. 判断当前目录是否为空
-    // const localPath = process.cwd();
-    // if (!this.isDirEmpty(localPath)) {
-    // let ifContinue = false;
-    // if (!this.force) {
-    //   // 询问是否继续创建
-    //   ifContinue = (
-    //     await inquirer.prompt({
-    //       type: 'confirm',
-    //       name: 'ifContinue',
-    //       default: false,
-    //       message: '当前文件夹不为空，是否继续创建项目？'
-    //     })
-    //   ).ifContinue;
-    //   if (!ifContinue) {
-    //     return;
-    //   }
-    // }
-    // 2. 是否启动强制更新
-    // if (ifContinue || this.force) {
-    // 给用户做二次确认
-    // const { confirmDelete } = await inquirer.prompt({
-    //   type: 'confirm',
-    //   name: 'confirmDelete',
-    //   default: false,
-    //   message: '是否确认清空当前目录下的文件？'
-    // });
-    // if (confirmDelete) {
-    // 清空当前目录
-    //   fse.emptyDirSync(localPath);
-    // }
-    // }
-    // }
-    return this.getProjectInfo();
+    return templates;
   }
 
   async getProjectInfo() {
@@ -370,9 +269,6 @@ class InitCommand extends Command {
       ]
     });
     log.verbose('type', type);
-    // this.template = this.template.filter(template =>
-    //   template.tag.includes(type)
-    // );
     const title = type === TYPE_PROJECT ? '项目' : '组件';
     const projectNamePrompt = {
       type: 'input',
@@ -428,7 +324,7 @@ class InitCommand extends Command {
         type: 'list',
         name: 'projectTemplate',
         message: `请选择${title}模板`,
-        choices: this.createTemplateChoice()
+        choices: this.projectTemplates
       }
     );
     if (type === TYPE_PROJECT) {
@@ -470,7 +366,7 @@ class InitCommand extends Command {
       projectInfo.name = projectInfo.projectName;
       projectInfo.className = require('kebab-case')(
         projectInfo.projectName
-      ).replace(/^-/, '');
+      ).replace(/^-/g, '');
     }
     if (projectInfo.projectVersion) {
       projectInfo.version = projectInfo.projectVersion;
@@ -490,12 +386,12 @@ class InitCommand extends Command {
   //   return !fileList || fileList.length <= 0;
   // }
 
-  createTemplateChoice() {
-    // return this.template.map(item => ({
-    //   value: item.npmName,
-    //   name: item.name
-    // }));
-  }
+  // createTemplateChoice() {
+  //   return this.projectTemplates.map(item => ({
+  //     value: item.npmName,
+  //     name: item.name
+  //   }));
+  // }
 }
 
 function init(argv) {
