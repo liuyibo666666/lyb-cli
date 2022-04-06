@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/exec",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "exec",
   "author": "liuyibo <liuyibo@luojilab.com>",
   "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
@@ -28,10 +28,10 @@
     "url": "https://github.com/liuyibo666666/lyb-cli/issues"
   },
   "dependencies": {
-    "@lyb-cli/init": "^0.0.9",
-    "@lyb-cli/install": "^0.0.9",
-    "@lyb-cli/log": "^0.0.9",
-    "@lyb-cli/utils": "^0.0.9"
+    "@lyb-cli/init": "^0.0.10",
+    "@lyb-cli/install": "^0.0.10",
+    "@lyb-cli/log": "^0.0.10",
+    "@lyb-cli/utils": "^0.0.10"
   },
   "gitHead": "21b9fae0d2910703416a4e923f06c2c3dc689da1"
 }
