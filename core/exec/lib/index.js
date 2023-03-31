@@ -29,7 +29,12 @@ async function exec() {
     });
     args[args.length - 1] = o;
     // 引入并执行指令
-    require(packageName)(args);
+    const task = require(packageName);
+    if (!task) {
+      log.verbose('暂时还没有该功能');
+      return;
+    }
+    task(args);
   } catch (e) {
     log.error(e.message);
   }

@@ -2,7 +2,7 @@
   "name": "@lyb-cli/command",
   "version": "0.0.10",
   "description": "> TODO: description",
-  "author": "liuyibo <liuyibo@luojilab.com>",
+  "author": "liuyibo <754969828@qq.com>",
   "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
@@ -29,7 +29,7 @@
   },
   "dependencies": {
     "@lyb-cli/log": "^0.0.10",
-    "colors": "^1.4.2",
+    "colors": "^1.4.0",
     "semver": "^7.3.5"
   },
   "gitHead": "21b9fae0d2910703416a4e923f06c2c3dc689da1"
