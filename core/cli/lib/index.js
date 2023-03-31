@@ -41,14 +41,6 @@ function registerCommand() {
     .command('install <templateName>')
     .action(exec);
 
-  program
-    .command('run [cmd]', 'run getflow cli', {
-      executableFile: 'getflow',
-      // isDefault: false,
-      // hidden: true
-    })
-    .alias('r');
-
   // 开启debug模式
   program.on('option:debug', function () {
     process.env.LOG_LEVEL = 'verbose';
