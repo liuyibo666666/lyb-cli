@@ -22,6 +22,7 @@ const COMPONENT_FILE = '.componentrc';
 
 class InitCommand extends Command {
   initInfo = '';
+  projectName= '';
 
   constructor(argv) {
     super(argv);
@@ -117,7 +118,7 @@ class InitCommand extends Command {
       log.success('模板安装成功');
     } catch (e) {
       log.success('模板安装失败');
-      // TODO失败则删除已安装的文件
+      // TODO 失败则删除已安装的文件
       throw e;
     }
     const ignore = ['**/node_modules/**', '**/public/**'];

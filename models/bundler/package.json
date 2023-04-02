@@ -1,0 +1,48 @@
+{
+  "name": "@lyb-cli/bundler",
+  "version": "0.0.10",
+  "description": "构建核心操作模型",
+  "keywords": [
+    "bundler"
+  ],
+  "author": "liuyibo666666 <754869828@qq.com>",
+  "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
+  "license": "ISC",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmmirror.com/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyibo666666/lyb-cli.git"
+  },
+  "scripts": {
+    "test": "node ./__tests__/@lyb-cli/bundler.test.js"
+  },
+  "bugs": {
+    "url": "https://github.com/liuyibo666666/lyb-cli/issues"
+  },
+  "peerDependencies": {
+    "vue": "~2.6.14",
+    "vue-template-compiler": "~2.6.14"
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "postcss-cssnext": "^3.1.1",
+    "postcss-import": "^15.1.0",
+    "postcss-preset-env": "^8.2.0",
+    "shortid": "^2.2.16",
+    "vue-loader": "15.9.8",
+    "webpack": "^5.77.0",
+    "webpack-bundle-analyzer": "^4.8.0",
+    "webpack-merge": "^5.8.0"
+  }
+}

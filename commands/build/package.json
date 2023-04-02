@@ -1,8 +1,11 @@
 {
-  "name": "@lyb-cli/exec",
+  "name": "@lyb-cli/build",
   "version": "0.0.10",
-  "description": "exec",
-  "author": "liuyibo <754969828@qq.com>",
+  "description": "脚手架构建命令",
+  "keywords": [
+    "build"
+  ],
+  "author": "liuyibo666666 <754869828@qq.com>",
   "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
   "license": "ISC",
   "main": "lib/index.js",
@@ -14,25 +17,22 @@
     "lib"
   ],
   "publishConfig": {
-    "registry": "https://registry.npmjs.org",
-    "access": "public"
+    "registry": "https://registry.npmmirror.com/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/liuyibo666666/lyb-cli.git"
   },
   "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
+    "test": "node ./__tests__/@lyb-cli/build.test.js"
   },
   "bugs": {
     "url": "https://github.com/liuyibo666666/lyb-cli/issues"
   },
   "dependencies": {
-    "@lyb-cli/build": "^0.0.10",
-    "@lyb-cli/init": "^0.0.10",
-    "@lyb-cli/install": "^0.0.10",
+    "@lyb-cli/bundler": "^0.0.10",
+    "@lyb-cli/command": "^0.0.10",
     "@lyb-cli/log": "^0.0.10",
     "@lyb-cli/utils": "^0.0.10"
-  },
-  "gitHead": "21b9fae0d2910703416a4e923f06c2c3dc689da1"
+  }
 }

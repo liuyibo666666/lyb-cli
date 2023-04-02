@@ -5,6 +5,7 @@ const log = require('@lyb-cli/log');
 const SETTINGS = {
   init: '@lyb-cli/init',
   install: '@lyb-cli/install',
+  build: '@lyb-cli/build',
   publish: '',
   add: ''
 };

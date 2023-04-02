@@ -41,6 +41,12 @@ function registerCommand() {
     .command('install <templateName>')
     .action(exec);
 
+    program
+    .command('build')
+    .option('-p, --production', '生产模式')
+    .option('-a, --analyzer', '打包体积分析，开启 BundleAnalyzerPlugin')
+    .option('-d, --debug', '是否开启调试模式', false)
+    .action(exec);
   // 开启debug模式
   program.on('option:debug', function () {
     process.env.LOG_LEVEL = 'verbose';

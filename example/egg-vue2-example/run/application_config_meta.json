@@ -1,0 +1,290 @@
+{
+  "keys": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.default.js",
+  "env": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
+  "static": {
+    "prefix": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
+    "dir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
+    "dynamic": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
+    "preload": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
+    "maxAge": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
+    "buffer": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
+    "maxFiles": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-static/config/config.default.js"
+  },
+  "session": {
+    "maxAge": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-session/config/config.default.js",
+    "key": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-session/config/config.default.js",
+    "httpOnly": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-session/config/config.default.js",
+    "encrypt": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-session/config/config.default.js",
+    "logValue": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-session/config/config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+    "protocolWhiteList": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+    "defaultMiddleware": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+    "csrf": {
+      "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "type": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "ignoreJSON": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "useSession": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "cookieName": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "sessionName": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "headerName": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "bodyName": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "queryName": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "supportedRequests": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "refererWhiteList": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+    },
+    "xframe": {
+      "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+    },
+    "hsts": {
+      "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.local.js",
+      "maxAge": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "includeSubdomains": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+    },
+    "dta": {
+      "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+    },
+    "noopen": {
+      "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+    },
+    "nosniff": {
+      "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+    },
+    "xssProtection": {
+      "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "value": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+    },
+    "csp": {
+      "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "policy": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "ipExceptionList": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js",
+      "checkAddress": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security/config/config.default.js"
+  },
+  "jsonp": {
+    "limit": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-jsonp/config/config.default.js",
+    "callback": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-jsonp/config/config.default.js",
+    "csrf": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-jsonp/config/config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-onerror/config/config.default.js",
+    "appErrorFilter": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-onerror/config/config.default.js",
+    "templatePath": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-onerror/config/config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-i18n/config/config.default.js",
+    "dirs": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-i18n/config/config.default.js",
+    "queryField": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-i18n/config/config.default.js",
+    "cookieField": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-i18n/config/config.default.js",
+    "cookieDomain": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-i18n/config/config.default.js",
+    "cookieMaxAge": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-i18n/config/config.default.js"
+  },
+  "watcher": {
+    "type": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-watcher/config/config.local.js",
+    "eventSources": {
+      "default": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-watcher/config/config.default.js",
+      "development": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-watcher/config/config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-schedule/config/config.default.js",
+      "file": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-schedule/config/config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-schedule/config/config.default.js"
+  },
+  "multipart": {
+    "mode": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "autoFields": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "defaultCharset": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "defaultParamCharset": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "fieldNameSize": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "fieldSize": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "fields": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "fileSize": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "files": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "fileExtensions": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "whitelist": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "allowArrayField": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "tmpdir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+    "cleanSchedule": {
+      "cron": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js",
+      "disable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart/config/config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-development/config/config.default.js",
+    "ignoreDirs": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-development/config/config.default.js",
+    "fastReady": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-development/config/config.default.js",
+    "reloadOnDebug": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-development/config/config.default.js",
+    "overrideDefault": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-development/config/config.default.js",
+    "overrideIgnore": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-development/config/config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-logrotator/config/config.default.js",
+    "hourDelimiter": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-logrotator/config/config.default.js",
+    "filesRotateBySize": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-logrotator/config/config.default.js",
+    "maxFileSize": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-logrotator/config/config.default.js",
+    "maxFiles": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-logrotator/config/config.default.js",
+    "rotateDuration": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-logrotator/config/config.default.js",
+    "maxDays": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-logrotator/config/config.default.js"
+  },
+  "view": {
+    "root": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-view/config/config.default.js",
+    "cache": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-view/config/config.local.js",
+    "defaultExtension": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-view/config/config.default.js",
+    "defaultViewEngine": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-view/config/config.default.js",
+    "mapping": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-view/config/config.default.js"
+  },
+  "name": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "cookies": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "proxy": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "maxIpsCount": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "maxProxyCount": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "protocolHeaders": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "ipHeaders": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "hostHeaders": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "pkg": {
+    "name": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "version": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "description": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "scripts": {
+      "dev": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+    },
+    "author": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "license": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "dependencies": {
+      "babel-loader": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "egg": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "postcss-import": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "postcss-loader": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "postcss-nested": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "postcss-preset-env": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "vue": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "vue-loader": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "vue-router": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+    },
+    "devDependencies": {
+      "@babel/core": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "@babel/helper-compilation-targets": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "@babel/plugin-proposal-class-properties": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "@babel/preset-env": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "egg-bin": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "vue-template-compiler": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+    }
+  },
+  "baseDir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "HOME": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "rundir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "dump": {
+    "ignore": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "timing": {
+      "slowBootActionMinDuration": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+    }
+  },
+  "confusedConfigurations": {
+    "bodyparser": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "notFound": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "sitefile": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "middlewares": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "httpClient": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "cacheControl": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+  },
+  "bodyParser": {
+    "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "formLimit": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "jsonLimit": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "textLimit": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "strict": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "queryString": {
+      "arrayLimit": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "depth": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "parameterLimit": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+    },
+    "onerror": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+  },
+  "logger": {
+    "dir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "encoding": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "env": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "level": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "consoleLevel": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "disableConsoleAfterReady": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "outputJSON": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "buffer": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "appLogName": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "coreLogName": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "agentLogName": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "errorLogName": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "coreLogger": {
+      "consoleLevel": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.local.js"
+    },
+    "allowDebugAtProd": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "enablePerformanceTimer": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "enableFastContextLogger": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "dnsCacheLookupInterval": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "dnsCacheMaxLength": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "request": {
+      "timeout": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "freeSocketTimeout": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "maxSockets": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "maxFreeSockets": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+    },
+    "useHttpClientNext": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+  },
+  "meta": {
+    "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "logging": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+  },
+  "coreMiddleware": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "workerStartTimeout": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "serverTimeout": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "port": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "hostname": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+    "responseTimeout": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+  },
+  "onClientError": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+}

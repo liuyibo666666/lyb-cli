@@ -15,7 +15,7 @@ function spinnerStart(msg, spinnerString = '|/-\\') {
 }
 
 function sleep(timeout = 1000) {
-  return new Promise(resolve => setTimeout(resolve, timeout));
+  return new Promise((resolve) => setTimeout(resolve, timeout));
 }
 
 function exec(command, args, options) {
@@ -30,10 +30,10 @@ function exec(command, args, options) {
 function execAsync(command, args, options) {
   return new Promise((resolve, reject) => {
     const p = exec(command, args, options);
-    p.on('error', e => {
+    p.on('error', (e) => {
       reject(e);
     });
-    p.on('exit', c => {
+    p.on('exit', (c) => {
       resolve(c);
     });
   });
@@ -66,6 +66,16 @@ function writeFile(path, data, { rewrite = true } = {}) {
   }
 }
 
+function fileAccess(path) {
+  const { accessSync, constants } = fs;
+  try {
+    accessSync(path, constants.R_OK | constants.W_OK);
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
+
 module.exports = {
   isObject,
   spinnerStart,
@@ -74,4 +84,5 @@ module.exports = {
   execAsync,
   readFile,
   writeFile,
+  fileAccess,
 };

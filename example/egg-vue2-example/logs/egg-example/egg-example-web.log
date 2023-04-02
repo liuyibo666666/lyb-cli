@@ -1,0 +1,45 @@
+2022-10-27 00:00:07,339 ERROR 40271 [-/127.0.0.1/-/3ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (/Users/liuyibo/project/learn/egg-example/node_modules/egg/lib/application.js:269:15)
+    at Object.get cookies [as cookies] (/Users/liuyibo/project/learn/egg-example/node_modules/egg/app/extend/context.js:23:66)
+    at Object.get [egg-security#CSRF_SECRET] (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/app/extend/context.js:91:35)
+    at Object.ensureCsrfSecret (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/app/extend/context.js:104:13)
+    at csrf (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/lib/middlewares/csrf.js:15:11)
+    at dispatch (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/liuyibo/project/learn/egg-example/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/liuyibo/project/learn/egg-example/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/liuyibo/project/learn/egg-example/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/liuyibo/project/learn/egg-example/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+
+pid: 40271
+hostname: liuyibodeMacBook-Pro.local
+
+2022-10-27 00:00:57,609 ERROR 40295 [-/127.0.0.1/-/3ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (/Users/liuyibo/project/learn/egg-example/node_modules/egg/lib/application.js:269:15)
+    at Object.get cookies [as cookies] (/Users/liuyibo/project/learn/egg-example/node_modules/egg/app/extend/context.js:23:66)
+    at Object.get [egg-security#CSRF_SECRET] (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/app/extend/context.js:91:35)
+    at Object.ensureCsrfSecret (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/app/extend/context.js:104:13)
+    at csrf (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/lib/middlewares/csrf.js:15:11)
+    at dispatch (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/liuyibo/project/learn/egg-example/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/liuyibo/project/learn/egg-example/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/liuyibo/project/learn/egg-example/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/liuyibo/project/learn/egg-example/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+
+pid: 40295
+hostname: liuyibodeMacBook-Pro.local
+
+2022-10-27 00:00:58,604 ERROR 40295 [-/127.0.0.1/-/2ms GET /] nodejs.Error: Please set config.keys first
+    at Application.get keys [as keys] (/Users/liuyibo/project/learn/egg-example/node_modules/egg/lib/application.js:269:15)
+    at Object.get cookies [as cookies] (/Users/liuyibo/project/learn/egg-example/node_modules/egg/app/extend/context.js:23:66)
+    at Object.get [egg-security#CSRF_SECRET] (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/app/extend/context.js:91:35)
+    at Object.ensureCsrfSecret (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/app/extend/context.js:104:13)
+    at csrf (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/lib/middlewares/csrf.js:15:11)
+    at dispatch (/Users/liuyibo/project/learn/egg-example/node_modules/egg-security/node_modules/koa-compose/index.js:42:32)
+    at /Users/liuyibo/project/learn/egg-example/node_modules/egg-security/node_modules/koa-compose/index.js:34:12
+    at dispatch (/Users/liuyibo/project/learn/egg-example/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at session (/Users/liuyibo/project/learn/egg-example/node_modules/koa-session/index.js:41:13)
+    at dispatch (/Users/liuyibo/project/learn/egg-example/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+
+pid: 40295
+hostname: liuyibodeMacBook-Pro.local
+

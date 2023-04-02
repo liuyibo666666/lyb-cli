@@ -1,6 +1,7 @@
 .vscode
 .idea
 node_modules
+**/public/dist/**
 
 packages/**/node_modules
 lerna-debug.log
