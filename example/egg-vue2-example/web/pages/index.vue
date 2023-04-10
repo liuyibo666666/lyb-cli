@@ -1,6 +1,6 @@
 <template>
   <div class="box">
-    <h1>这是首页</h1>
+    <h1>这是首页666</h1>
   </div>
 </template>
 

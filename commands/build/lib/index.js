@@ -1,13 +1,15 @@
 const Command = require('@lyb-cli/command');
 const log = require('@lyb-cli/log');
 const { spinnerStart, fileAccess } = require('@lyb-cli/utils');
-const Bundler = require('@lyb-cli/bundler');
+const { Bundler } = require('@lyb-cli/bundler');
 const path = require('path');
 
 const CONFIG_NAME = 'lyb-cli-config.js';
 
 class BuildCommand extends Command {
   customBuildConfig;
+  isDev;
+  analyzer;
   constructor(argv) {
     super(argv);
     this.isDev = !argv[0].production;
@@ -43,9 +45,9 @@ class BuildCommand extends Command {
     try {
       const spinner = spinnerStart('开始构建...');
       const timeStart = Date.now();
-      const bundler = new Bundler();
+      const bundler = new Bundler(this.customBuildConfig);
       log.verbose('Webpack config:', bundler.buildConfig);
-      const output = await bundler.build(this.customBuildConfig);
+      const output = await bundler.build();
       spinner.stop(true);
       log.info(`${output.output}\n`);
       const time = Math.round((Date.now() - timeStart) / 100) / 10;

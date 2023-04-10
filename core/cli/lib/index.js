@@ -53,6 +53,17 @@ function registerCommand() {
     log.level = process.env.LOG_LEVEL;
   });
 
+  program
+    .command('dev')
+    .option('-p, --port <number>', '端口号', parseInt)
+    .option('-d, --debug', '是否开启调试模式', false)
+    .action(exec);
+  // 开启debug模式
+  program.on('option:debug', function () {
+    process.env.LOG_LEVEL = 'verbose';
+    log.level = process.env.LOG_LEVEL;
+  });
+
   // 对未知命令监听
   program.on('command:*', function (obj) {
     const availableCommands = program.commands.map(cmd => cmd.name());

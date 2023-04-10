@@ -128,7 +128,7 @@
       "fileExtensions": [],
       "whitelist": null,
       "allowArrayField": false,
-      "tmpdir": "/var/folders/5r/n22rlvv545g3432pd_2wzvq00000gn/T/egg-multipart-tmp/egg-example",
+      "tmpdir": "/var/folders/5r/n22rlvv545g3432pd_2wzvq00000gn/T/egg-multipart-tmp/egg-vue2-example",
       "cleanSchedule": {
         "cron": "0 30 4 * * *",
         "disable": false
@@ -158,7 +158,8 @@
       "preload": false,
       "buffer": true,
       "maxFiles": 1000,
-      "maxAge": 31536000
+      "maxAge": 31536000,
+      "enable": false
     },
     "view": {
       "root": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/app/view",
@@ -168,8 +169,8 @@
       "mapping": {}
     },
     "env": "local",
-    "name": "egg-example",
-    "keys": "<String len: 15>",
+    "name": "egg-vue2-example",
+    "keys": "<String len: 35>",
     "cookies": {},
     "proxy": false,
     "maxIpsCount": 0,
@@ -178,7 +179,7 @@
     "ipHeaders": "x-forwarded-for",
     "hostHeaders": "",
     "pkg": {
-      "name": "egg-example",
+      "name": "egg-vue2-example",
       "version": "1.0.0",
       "description": "基于egg的小例子",
       "scripts": {
@@ -187,8 +188,13 @@
       "author": "liuyibo",
       "license": "ISC",
       "dependencies": {
-        "babel-loader": "^8.2.2",
+        "body-parser": "^1.20.2",
+        "chokidar": "^3.5.3",
         "egg": "^3.3.3",
+        "egg-cluster": "^2.0.1",
+        "egg-watcher": "^3.1.1",
+        "eventsource": "^2.0.2",
+        "glob": "^9.3.4",
         "postcss-import": "^15.1.0",
         "postcss-loader": "^7.1.0",
         "postcss-nested": "^6.0.1",
@@ -199,11 +205,14 @@
       },
       "devDependencies": {
         "@babel/core": "^7.13.16",
-        "@babel/helper-compilation-targets": "^7.15.0",
-        "@babel/plugin-proposal-class-properties": "^7.13.0",
         "@babel/preset-env": "^7.21.4",
+        "@lyb-cli/bundler": "file:../../models/bundler",
+        "babel-loader": "^8.2.2",
         "egg-bin": "^5.13.4",
-        "vue-template-compiler": "\\x7e2.6.14"
+        "egg-webpack": "^5.0.1",
+        "vue-template-compiler": "\\x7e2.6.14",
+        "webpack-dev-middleware": "^6.0.2",
+        "webpack-hot-middleware": "^2.25.3"
       }
     },
     "baseDir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example",
@@ -244,7 +253,7 @@
       "onerror": "<Function onerror>"
     },
     "logger": {
-      "dir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/logs/egg-example",
+      "dir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/logs/egg-vue2-example",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -252,7 +261,7 @@
       "disableConsoleAfterReady": false,
       "outputJSON": false,
       "buffer": true,
-      "appLogName": "egg-example-web.log",
+      "appLogName": "egg-vue2-example-web.log",
       "coreLogName": "egg-web.log",
       "agentLogName": "egg-agent.log",
       "errorLogName": "common-error.log",
@@ -311,9 +320,13 @@
       "responseTimeout": 60000
     },
     "onClientError": null,
+    "assetsManifest": {
+      "baseDir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/public/dist"
+    },
+    "middleware": [],
     "coreMiddlewares": "~config~coreMiddleware",
-    "appMiddlewares": [],
-    "appMiddleware": "~config~appMiddlewares"
+    "appMiddlewares": "~config~middleware",
+    "appMiddleware": "~config~middleware"
   },
   "plugins": {
     "onerror": {
@@ -470,13 +483,13 @@
     }
   },
   "appInfo": {
-    "name": "egg-example",
+    "name": "egg-vue2-example",
     "baseDir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example",
     "env": "local",
     "scope": "",
     "HOME": "/Users/liuyibo",
     "pkg": {
-      "name": "egg-example",
+      "name": "egg-vue2-example",
       "version": "1.0.0",
       "description": "基于egg的小例子",
       "scripts": {
@@ -485,8 +498,13 @@
       "author": "liuyibo",
       "license": "ISC",
       "dependencies": {
-        "babel-loader": "^8.2.2",
+        "body-parser": "^1.20.2",
+        "chokidar": "^3.5.3",
         "egg": "^3.3.3",
+        "egg-cluster": "^2.0.1",
+        "egg-watcher": "^3.1.1",
+        "eventsource": "^2.0.2",
+        "glob": "^9.3.4",
         "postcss-import": "^15.1.0",
         "postcss-loader": "^7.1.0",
         "postcss-nested": "^6.0.1",
@@ -497,11 +515,14 @@
       },
       "devDependencies": {
         "@babel/core": "^7.13.16",
-        "@babel/helper-compilation-targets": "^7.15.0",
-        "@babel/plugin-proposal-class-properties": "^7.13.0",
         "@babel/preset-env": "^7.21.4",
+        "@lyb-cli/bundler": "file:../../models/bundler",
+        "babel-loader": "^8.2.2",
         "egg-bin": "^5.13.4",
-        "vue-template-compiler": "\\x7e2.6.14"
+        "egg-webpack": "^5.0.1",
+        "vue-template-compiler": "\\x7e2.6.14",
+        "webpack-dev-middleware": "^6.0.2",
+        "webpack-hot-middleware": "^2.25.3"
       }
     },
     "root": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example"

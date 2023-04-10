@@ -6,6 +6,7 @@ const SETTINGS = {
   init: '@lyb-cli/init',
   install: '@lyb-cli/install',
   build: '@lyb-cli/build',
+  dev: '@lyb-cli/dev',
   publish: '',
   add: ''
 };

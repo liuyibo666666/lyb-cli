@@ -1,5 +1,5 @@
 {
-  "name": "egg-example",
+  "name": "egg-vue2-example",
   "version": "1.0.0",
   "description": "基于egg的小例子",
   "scripts": {
@@ -8,7 +8,13 @@
   "author": "liuyibo",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "chokidar": "^3.5.3",
     "egg": "^3.3.3",
+    "egg-cluster": "^2.0.1",
+    "egg-watcher": "^3.1.1",
+    "eventsource": "^2.0.2",
+    "glob": "^9.3.4",
     "postcss-import": "^15.1.0",
     "postcss-loader": "^7.1.0",
     "postcss-nested": "^6.0.1",
@@ -20,8 +26,12 @@
   "devDependencies": {
     "@babel/core": "^7.13.16",
     "@babel/preset-env": "^7.21.4",
+    "@lyb-cli/bundler": "file:../../models/bundler",
     "babel-loader": "^8.2.2",
     "egg-bin": "^5.13.4",
-    "vue-template-compiler": "~2.6.14"
+    "egg-webpack": "^5.0.1",
+    "vue-template-compiler": "~2.6.14",
+    "webpack-dev-middleware": "^6.0.2",
+    "webpack-hot-middleware": "^2.25.3"
   }
 }

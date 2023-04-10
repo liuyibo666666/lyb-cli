@@ -2,7 +2,8 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async index() {
-    this.ctx.body = 'Hello world';
+    // await this.ctx.render('index.html', {});
+    this.ctx.renderClient('egg-vue2-example', {});
   }
 }
 

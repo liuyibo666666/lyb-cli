@@ -16,22 +16,23 @@ class BuildConfigManager {
     this.appName = option.appName;
     this.input = option.input;
     this.output = option.output;
+    this.customWebpack = option.webpack || {};
     this.plugins = new BuildConfigPluginManager(option);
   }
 
-  getBuildConfig(custom) {
+  getBuildConfig() {
     const config = this.getBrowserBuildConfig();
-    const baseConfig = this.getBaseBuildConfig(custom);
-    const mergedConfig = WebpackMerge.merge(baseConfig, config, custom ?? {});
+    const baseConfig = this.getBaseBuildConfig();
+    const mergedConfig = WebpackMerge.merge(baseConfig, config, this.customWebpack);
     return mergedConfig;
   }
 
-  getBaseBuildConfig(custom) {
+  getBaseBuildConfig() {
     return {
       name: `${this.appName}`,
       entry: this.input,
       output: {
-        publicPath: `/${this.appName}/`,
+        publicPath: `/${this.appName}`,
         path: path.resolve(this.output, this.appName),
       },
       mode: this.isDev ? 'development' : 'production',
@@ -40,7 +41,7 @@ class BuildConfigManager {
       },
       plugins: this.plugins.getWebpackPlugins(),
       module: {
-        rules: getRules(this.isDev, custom),
+        rules: getRules(this.isDev, this.customWebpack),
       },
       devtool: this.isDev ? 'eval-cheap-module-source-map' : 'cheap-module-source-map',
       resolve: {
@@ -85,9 +86,8 @@ class BuildConfigManager {
     return {
       target: [ 'web', 'es5' ],
       output: {
-        // module: true,
-        chunkFilename: this.isDev ? 'js/[name].chunk.mjs' : 'js/[name].[contenthash:8].chunk.mjs',
-        filename: this.isDev ? 'js/[name].mjs' : 'js/[name].[contenthash:8].mjs',
+        chunkFilename: this.isDev ? 'js/[name].chunk.js' : 'js/[name].[contenthash:8].chunk.js',
+        filename: this.isDev ? 'js/[name].js' : 'js/[name].[contenthash:8].js',
       },
       experiments: {
         // html-webpack-plugin 目前还不支持 https://github.com/jantimon/html-webpack-plugin/issues/1492

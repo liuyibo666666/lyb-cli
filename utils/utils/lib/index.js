@@ -30,6 +30,9 @@ function exec(command, args, options) {
 function execAsync(command, args, options) {
   return new Promise((resolve, reject) => {
     const p = exec(command, args, options);
+    process.on('exit', () => {
+      p.kill('SIGTERM');
+    });
     p.on('error', (e) => {
       reject(e);
     });

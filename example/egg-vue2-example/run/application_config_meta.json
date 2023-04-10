@@ -1,15 +1,20 @@
 {
-  "keys": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.default.js",
-  "env": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
+  "assetsManifest": {
+    "baseDir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.default.js"
+  },
   "static": {
-    "prefix": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
-    "dir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
-    "dynamic": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
-    "preload": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
-    "maxAge": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
-    "buffer": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
+    "prefix": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.default.js",
+    "dir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.default.js",
+    "dynamic": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.default.js",
+    "preload": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.default.js",
+    "maxAge": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.default.js",
+    "buffer": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.default.js",
+    "enable": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
     "maxFiles": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-static/config/config.default.js"
   },
+  "keys": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.default.js",
+  "middleware": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.default.js",
+  "env": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/config/config.local.js",
   "session": {
     "maxAge": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-session/config/config.default.js",
     "key": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-session/config/config.default.js",
@@ -171,8 +176,13 @@
     "author": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
     "license": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
     "dependencies": {
-      "babel-loader": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "body-parser": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "chokidar": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
       "egg": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "egg-cluster": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "egg-watcher": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "eventsource": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "glob": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
       "postcss-import": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
       "postcss-loader": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
       "postcss-nested": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
@@ -183,11 +193,14 @@
     },
     "devDependencies": {
       "@babel/core": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
-      "@babel/helper-compilation-targets": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
-      "@babel/plugin-proposal-class-properties": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
       "@babel/preset-env": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "@lyb-cli/bundler": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "babel-loader": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
       "egg-bin": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
-      "vue-template-compiler": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
+      "egg-webpack": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "vue-template-compiler": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "webpack-dev-middleware": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
+      "webpack-hot-middleware": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js"
     }
   },
   "baseDir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/config.default.js",
