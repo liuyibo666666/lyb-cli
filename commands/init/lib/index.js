@@ -56,38 +56,38 @@ class InitCommand extends Command {
       throw new Error('没有安装任何模板, 请执行: lyb-cli install [模板名称] 安装模板。\n 详情参考:https://github.com/liuyibo666666/lyb-cli/blob/master/README.md。');
     }
     // 1. 判断当前目录是否为空
-    // const localPath = process.cwd();
-    // if (!this.isDirEmpty(localPath)) {
-    //   let ifContinue = false;
-    //   if (!this.force) {
-    //     // 询问是否继续创建
-    //     ifContinue = (
-    //       await inquirer.prompt({
-    //         type: 'confirm',
-    //         name: 'ifContinue',
-    //         default: false,
-    //         message: '当前文件夹不为空，是否继续创建项目？'
-    //       })
-    //     ).ifContinue;
-    //     if (!ifContinue) {
-    //       return;
-    //     }
-    //   }
-    //   // 2. 是否启动强制更新
-    //   if (ifContinue || this.force) {
-    //     // 给用户做二次确认
-    //     const { confirmDelete } = await inquirer.prompt({
-    //       type: 'confirm',
-    //       name: 'confirmDelete',
-    //       default: false,
-    //       message: '是否确认清空当前目录下的文件？'
-    //     });
-    //     if (confirmDelete) {
-    //       // 清空当前目录
-    //       fse.emptyDirSync(localPath);
-    //     }
-    //   }
-    // }
+    const localPath = process.cwd();
+    if (!this.isDirEmpty(localPath)) {
+      let ifContinue = false;
+      if (!this.force) {
+        // 询问是否继续创建
+        ifContinue = (
+          await inquirer.prompt({
+            type: 'confirm',
+            name: 'ifContinue',
+            default: false,
+            message: '当前文件夹不为空，是否继续创建项目？'
+          })
+        ).ifContinue;
+        if (!ifContinue) {
+          return;
+        }
+      }
+      // 2. 是否启动强制更新
+      if (ifContinue || this.force) {
+        // 给用户做二次确认
+        const { confirmDelete } = await inquirer.prompt({
+          type: 'confirm',
+          name: 'confirmDelete',
+          default: false,
+          message: '是否确认清空当前目录下的文件？'
+        });
+        if (confirmDelete) {
+          // 清空当前目录
+          fse.emptyDirSync(localPath);
+        }
+      }
+    }
     return this.getProjectInfo();
   }
 

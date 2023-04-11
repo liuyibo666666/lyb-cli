@@ -1,0 +1,530 @@
+{
+  "config": {
+    "session": {
+      "maxAge": 86400000,
+      "key": "EGG_SESS",
+      "httpOnly": true,
+      "encrypt": true,
+      "logValue": true
+    },
+    "security": {
+      "domainWhiteList": [],
+      "protocolWhiteList": [],
+      "defaultMiddleware": "csrf,hsts,methodnoallow,noopen,nosniff,csp,xssProtection,xframe,dta",
+      "csrf": {
+        "enable": true,
+        "type": "ctoken",
+        "ignoreJSON": false,
+        "useSession": false,
+        "cookieName": "csrfToken",
+        "sessionName": "csrfToken",
+        "headerName": "x-csrf-token",
+        "bodyName": "_csrf",
+        "queryName": "_csrf",
+        "supportedRequests": [
+          {
+            "path": {},
+            "methods": [
+              "POST",
+              "PATCH",
+              "DELETE",
+              "PUT",
+              "CONNECT"
+            ]
+          }
+        ],
+        "refererWhiteList": []
+      },
+      "xframe": {
+        "enable": true,
+        "value": "SAMEORIGIN"
+      },
+      "hsts": {
+        "enable": false,
+        "maxAge": 31536000,
+        "includeSubdomains": false
+      },
+      "dta": {
+        "enable": true
+      },
+      "methodnoallow": {
+        "enable": true
+      },
+      "noopen": {
+        "enable": true
+      },
+      "nosniff": {
+        "enable": true
+      },
+      "referrerPolicy": {
+        "enable": false,
+        "value": "no-referrer-when-downgrade"
+      },
+      "xssProtection": {
+        "enable": true,
+        "value": "1; mode=block"
+      },
+      "csp": {
+        "enable": false,
+        "policy": {}
+      },
+      "ssrf": {
+        "ipBlackList": null,
+        "ipExceptionList": null,
+        "checkAddress": null
+      },
+      "_protocolWhiteListSet": "<Set>"
+    },
+    "helper": {
+      "shtml": {}
+    },
+    "jsonp": {
+      "limit": 50,
+      "callback": [
+        "_callback",
+        "callback"
+      ],
+      "csrf": false
+    },
+    "onerror": {
+      "errorPageUrl": "",
+      "appErrorFilter": null,
+      "templatePath": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-onerror/lib/onerror_page.mustache"
+    },
+    "i18n": {
+      "defaultLocale": "en_US",
+      "dirs": [],
+      "queryField": "locale",
+      "cookieField": "locale",
+      "cookieDomain": "",
+      "cookieMaxAge": "1y"
+    },
+    "watcher": {
+      "type": "development",
+      "eventSources": {
+        "default": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-watcher/lib/event-sources/development"
+      }
+    },
+    "customLogger": {
+      "scheduleLogger": {
+        "consoleLevel": "NONE",
+        "file": "egg-schedule.log"
+      }
+    },
+    "schedule": {
+      "directory": []
+    },
+    "multipart": {
+      "mode": "stream",
+      "autoFields": false,
+      "defaultCharset": "utf8",
+      "defaultParamCharset": "utf8",
+      "fieldNameSize": 100,
+      "fieldSize": "100kb",
+      "fields": 10,
+      "fileSize": "10mb",
+      "files": 10,
+      "fileExtensions": [],
+      "whitelist": null,
+      "allowArrayField": false,
+      "tmpdir": "/var/folders/5r/n22rlvv545g3432pd_2wzvq00000gn/T/egg-multipart-tmp/egg-vue2-example",
+      "cleanSchedule": {
+        "cron": "0 30 4 * * *",
+        "disable": false
+      }
+    },
+    "development": {
+      "watchDirs": [],
+      "ignoreDirs": [],
+      "fastReady": false,
+      "reloadOnDebug": true,
+      "overrideDefault": false,
+      "overrideIgnore": false
+    },
+    "logrotator": {
+      "filesRotateByHour": null,
+      "hourDelimiter": "-",
+      "filesRotateBySize": null,
+      "maxFileSize": 52428800,
+      "maxFiles": 10,
+      "rotateDuration": 60000,
+      "maxDays": 31
+    },
+    "static": {
+      "prefix": "/",
+      "dir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/public/dist",
+      "dynamic": true,
+      "preload": false,
+      "buffer": true,
+      "maxFiles": 1000,
+      "maxAge": 31536000,
+      "enable": false
+    },
+    "view": {
+      "root": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/app/view",
+      "cache": false,
+      "defaultExtension": ".html",
+      "defaultViewEngine": "",
+      "mapping": {}
+    },
+    "env": "local",
+    "name": "egg-vue2-example",
+    "keys": "<String len: 35>",
+    "cookies": {},
+    "proxy": false,
+    "maxIpsCount": 0,
+    "maxProxyCount": 0,
+    "protocolHeaders": "x-forwarded-proto",
+    "ipHeaders": "x-forwarded-for",
+    "hostHeaders": "",
+    "pkg": {
+      "name": "egg-vue2-example",
+      "version": "1.0.0",
+      "description": "基于egg的小例子",
+      "scripts": {
+        "dev": "egg-bin dev"
+      },
+      "author": "liuyibo",
+      "license": "ISC",
+      "dependencies": {
+        "body-parser": "^1.20.2",
+        "chokidar": "^3.5.3",
+        "egg": "^3.3.3",
+        "egg-cluster": "^2.0.1",
+        "egg-watcher": "^3.1.1",
+        "eventsource": "^2.0.2",
+        "glob": "^9.3.4",
+        "postcss-import": "^15.1.0",
+        "postcss-loader": "^7.1.0",
+        "postcss-nested": "^6.0.1",
+        "postcss-preset-env": "^8.3.0",
+        "vue": "\\x7e2.6.14",
+        "vue-loader": "^15.9.0",
+        "vue-router": "\\x7e3.2.0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.13.16",
+        "@babel/preset-env": "^7.21.4",
+        "@lyb-cli/bundler": "file:../../models/bundler",
+        "babel-loader": "^8.2.2",
+        "egg-bin": "^5.13.4",
+        "egg-webpack": "^5.0.1",
+        "vue-template-compiler": "\\x7e2.6.14",
+        "webpack-dev-middleware": "^6.0.2",
+        "webpack-hot-middleware": "^2.25.3"
+      }
+    },
+    "baseDir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example",
+    "HOME": "/Users/liuyibo",
+    "rundir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/run",
+    "dump": {
+      "ignore": "<Set>",
+      "timing": {
+        "slowBootActionMinDuration": 5000
+      }
+    },
+    "confusedConfigurations": {
+      "bodyparser": "bodyParser",
+      "notFound": "notfound",
+      "sitefile": "siteFile",
+      "middlewares": "middleware",
+      "httpClient": "httpclient"
+    },
+    "notfound": {
+      "pageUrl": ""
+    },
+    "siteFile": {
+      "/favicon.ico": "<Buffer len: 6463>",
+      "cacheControl": "public, max-age=2592000"
+    },
+    "bodyParser": {
+      "enable": true,
+      "encoding": "utf8",
+      "formLimit": "1mb",
+      "jsonLimit": "1mb",
+      "textLimit": "1mb",
+      "strict": true,
+      "queryString": {
+        "arrayLimit": 100,
+        "depth": 5,
+        "parameterLimit": 1000
+      },
+      "onerror": "<Function onerror>"
+    },
+    "logger": {
+      "dir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/logs/egg-vue2-example",
+      "encoding": "utf8",
+      "env": "local",
+      "level": "INFO",
+      "consoleLevel": "INFO",
+      "disableConsoleAfterReady": false,
+      "outputJSON": false,
+      "buffer": true,
+      "appLogName": "egg-vue2-example-web.log",
+      "coreLogName": "egg-web.log",
+      "agentLogName": "egg-agent.log",
+      "errorLogName": "common-error.log",
+      "coreLogger": {
+        "consoleLevel": "WARN"
+      },
+      "allowDebugAtProd": false,
+      "enablePerformanceTimer": false,
+      "enableFastContextLogger": false,
+      "type": "agent",
+      "localStorage": "<AsyncLocalStorage>"
+    },
+    "httpclient": {
+      "enableDNSCache": false,
+      "dnsCacheLookupInterval": 10000,
+      "dnsCacheMaxLength": 1000,
+      "request": {
+        "timeout": 5000
+      },
+      "httpAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "httpsAgent": {
+        "keepAlive": true,
+        "freeSocketTimeout": 4000,
+        "maxSockets": 9007199254740991,
+        "maxFreeSockets": 256
+      },
+      "useHttpClientNext": false
+    },
+    "meta": {
+      "enable": true,
+      "logging": false
+    },
+    "coreMiddleware": [
+      "meta",
+      "siteFile",
+      "notfound",
+      "bodyParser",
+      "overrideMethod"
+    ],
+    "workerStartTimeout": 600000,
+    "serverTimeout": null,
+    "cluster": {
+      "listen": {
+        "path": "",
+        "port": 7001,
+        "hostname": ""
+      }
+    },
+    "clusterClient": {
+      "maxWaitTime": 60000,
+      "responseTimeout": 60000
+    },
+    "onClientError": null,
+    "assetsManifest": {
+      "baseDir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/public/dist"
+    },
+    "middleware": [],
+    "coreMiddlewares": "~config~coreMiddleware",
+    "appMiddlewares": "~config~middleware",
+    "appMiddleware": "~config~middleware"
+  },
+  "plugins": {
+    "onerror": {
+      "enable": true,
+      "package": "egg-onerror",
+      "name": "onerror",
+      "dependencies": [],
+      "optionalDependencies": [
+        "jsonp"
+      ],
+      "env": [],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-onerror",
+      "version": "2.2.0"
+    },
+    "session": {
+      "enable": true,
+      "package": "egg-session",
+      "name": "session",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-session",
+      "version": "3.3.0"
+    },
+    "i18n": {
+      "enable": true,
+      "package": "egg-i18n",
+      "name": "i18n",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-i18n",
+      "version": "2.1.1"
+    },
+    "watcher": {
+      "enable": true,
+      "package": "egg-watcher",
+      "name": "watcher",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-watcher",
+      "version": "3.1.1",
+      "dependents": [
+        "development"
+      ]
+    },
+    "multipart": {
+      "enable": true,
+      "package": "egg-multipart",
+      "name": "multipart",
+      "dependencies": [],
+      "optionalDependencies": [
+        "schedule"
+      ],
+      "env": [],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-multipart",
+      "version": "3.3.0"
+    },
+    "security": {
+      "enable": true,
+      "package": "egg-security",
+      "name": "security",
+      "dependencies": [],
+      "optionalDependencies": [
+        "session"
+      ],
+      "env": [],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-security",
+      "version": "2.11.0"
+    },
+    "development": {
+      "enable": true,
+      "package": "egg-development",
+      "name": "development",
+      "dependencies": [
+        "watcher"
+      ],
+      "optionalDependencies": [],
+      "env": [
+        "local"
+      ],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-development",
+      "version": "2.7.0"
+    },
+    "logrotator": {
+      "enable": true,
+      "package": "egg-logrotator",
+      "name": "logrotator",
+      "dependencies": [
+        "schedule"
+      ],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-logrotator",
+      "version": "3.1.0"
+    },
+    "schedule": {
+      "enable": true,
+      "package": "egg-schedule",
+      "name": "schedule",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-schedule",
+      "version": "4.0.0",
+      "dependents": [
+        "logrotator"
+      ]
+    },
+    "static": {
+      "enable": true,
+      "package": "egg-static",
+      "name": "static",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-static",
+      "version": "2.3.1"
+    },
+    "jsonp": {
+      "enable": true,
+      "package": "egg-jsonp",
+      "name": "jsonp",
+      "dependencies": [],
+      "optionalDependencies": [
+        "security"
+      ],
+      "env": [],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-jsonp",
+      "version": "2.0.0"
+    },
+    "view": {
+      "enable": true,
+      "package": "egg-view",
+      "name": "view",
+      "dependencies": [],
+      "optionalDependencies": [],
+      "env": [],
+      "from": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg/config/plugin.js",
+      "path": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example/node_modules/egg-view",
+      "version": "2.1.4"
+    }
+  },
+  "appInfo": {
+    "name": "egg-vue2-example",
+    "baseDir": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example",
+    "env": "local",
+    "scope": "",
+    "HOME": "/Users/liuyibo",
+    "pkg": {
+      "name": "egg-vue2-example",
+      "version": "1.0.0",
+      "description": "基于egg的小例子",
+      "scripts": {
+        "dev": "egg-bin dev"
+      },
+      "author": "liuyibo",
+      "license": "ISC",
+      "dependencies": {
+        "body-parser": "^1.20.2",
+        "chokidar": "^3.5.3",
+        "egg": "^3.3.3",
+        "egg-cluster": "^2.0.1",
+        "egg-watcher": "^3.1.1",
+        "eventsource": "^2.0.2",
+        "glob": "^9.3.4",
+        "postcss-import": "^15.1.0",
+        "postcss-loader": "^7.1.0",
+        "postcss-nested": "^6.0.1",
+        "postcss-preset-env": "^8.3.0",
+        "vue": "\\x7e2.6.14",
+        "vue-loader": "^15.9.0",
+        "vue-router": "\\x7e3.2.0"
+      },
+      "devDependencies": {
+        "@babel/core": "^7.13.16",
+        "@babel/preset-env": "^7.21.4",
+        "@lyb-cli/bundler": "file:../../models/bundler",
+        "babel-loader": "^8.2.2",
+        "egg-bin": "^5.13.4",
+        "egg-webpack": "^5.0.1",
+        "vue-template-compiler": "\\x7e2.6.14",
+        "webpack-dev-middleware": "^6.0.2",
+        "webpack-hot-middleware": "^2.25.3"
+      }
+    },
+    "root": "/Users/liuyibo/project/learn/test-cli/lyb-cli/example/egg-vue2-example"
+  }
+}
