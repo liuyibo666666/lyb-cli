@@ -20,6 +20,10 @@
     "registry": "https://registry.npmjs.org",
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liuyibo666666/lyb-cli.git"
+  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
