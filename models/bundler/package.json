@@ -11,10 +11,12 @@
   "main": "lib/index.js",
   "directories": {
     "lib": "lib",
+    "configs": "configs",
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "lib",
+    "configs"
   ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
