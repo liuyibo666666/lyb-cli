@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/build",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "脚手架构建命令",
   "keywords": [
     "build"
@@ -30,10 +30,10 @@
     "url": "https://github.com/liuyibo666666/lyb-cli/issues"
   },
   "dependencies": {
-    "@lyb-cli/bundler": "^0.1.1",
-    "@lyb-cli/command": "^0.1.1",
-    "@lyb-cli/log": "^0.1.1",
-    "@lyb-cli/utils": "^0.1.1"
+    "@lyb-cli/bundler": "^0.1.2",
+    "@lyb-cli/command": "^0.1.2",
+    "@lyb-cli/log": "^0.1.2",
+    "@lyb-cli/utils": "^0.1.2"
   },
   "gitHead": "3f31b0a6a3f00821a95f1e246ec1248ca898c385"
 }

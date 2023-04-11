@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/init",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "init",
   "author": "liuyibo <754969828@qq.com>",
   "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
@@ -28,10 +28,10 @@
     "url": "https://github.com/liuyibo666666/lyb-cli/issues"
   },
   "dependencies": {
-    "@lyb-cli/command": "^0.1.1",
-    "@lyb-cli/log": "^0.1.1",
-    "@lyb-cli/package": "^0.1.1",
-    "@lyb-cli/utils": "^0.1.1",
+    "@lyb-cli/command": "^0.1.2",
+    "@lyb-cli/log": "^0.1.2",
+    "@lyb-cli/package": "^0.1.2",
+    "@lyb-cli/utils": "^0.1.2",
     "ejs": "^3.1.6",
     "fs-extra": "^10.0.1",
     "glob": "^7.2.0",
