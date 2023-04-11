@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/bundler",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "构建核心操作模型",
   "keywords": [
     "bundler"
