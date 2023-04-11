@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/install",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "install",
   "author": "liuyibo <754869828@qq.com>",
   "homepage": "https://github.com/liuyibo666666/lyb-cli#readme",
@@ -25,10 +25,10 @@
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "dependencies": {
-    "@lyb-cli/command": "^0.1.3",
-    "@lyb-cli/log": "^0.1.3",
-    "@lyb-cli/package": "^0.1.3",
-    "@lyb-cli/utils": "^0.1.3"
+    "@lyb-cli/command": "^0.1.4",
+    "@lyb-cli/log": "^0.1.4",
+    "@lyb-cli/package": "^0.1.4",
+    "@lyb-cli/utils": "^0.1.4"
   },
   "bugs": {
     "url": "https://github.com/liuyibo666666/lyb-cli/issues"
