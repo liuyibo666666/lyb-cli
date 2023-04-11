@@ -34,5 +34,6 @@
     "@lyb-cli/command": "^0.1.1",
     "@lyb-cli/log": "^0.1.1",
     "@lyb-cli/utils": "^0.1.1"
-  }
+  },
+  "gitHead": "3f31b0a6a3f00821a95f1e246ec1248ca898c385"
 }
