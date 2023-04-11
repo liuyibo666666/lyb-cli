@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/log",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "@lyb-cli log",
   "keywords": [
     "log"
