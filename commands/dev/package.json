@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/dev",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "dev 指令",
   "keywords": [
     "dev"
@@ -30,9 +30,9 @@
     "url": "https://github.com/liuyibo666666/lyb-cli/issues"
   },
   "dependencies": {
-    "@lyb-cli/bundler": "^0.1.0",
-    "@lyb-cli/command": "^0.1.0",
-    "@lyb-cli/log": "^0.1.0",
-    "@lyb-cli/utils": "^0.1.0"
+    "@lyb-cli/bundler": "^0.1.1",
+    "@lyb-cli/command": "^0.1.1",
+    "@lyb-cli/log": "^0.1.1",
+    "@lyb-cli/utils": "^0.1.1"
   }
 }

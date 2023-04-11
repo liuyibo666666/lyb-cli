@@ -1,6 +1,6 @@
 {
   "name": "@lyb-cli/bundler",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "构建核心操作模型",
   "keywords": [
     "bundler"
@@ -34,7 +34,7 @@
     "vue-template-compiler": "~2.6.14"
   },
   "dependencies": {
-    "@lyb-cli/utils": "^0.1.0",
+    "@lyb-cli/utils": "^0.1.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.5",
     "postcss-cssnext": "^3.1.1",
